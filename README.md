@@ -18,7 +18,7 @@
 
 </p>
 
-`Your best friend for bulding SSR application with [next.js](https://nextjs.org/)`
+> Your best friend for bulding SSR application with [next.js](https://nextjs.org/)
 
 ### Features
 
@@ -48,5 +48,5 @@ serverless invoke local -f app            // test AWS lambda locally
 ###### AWS
 
 ```deploy
-yarn deploy
+yarn deploy                               // deploy to AWS
 ```
