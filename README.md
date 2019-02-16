@@ -42,7 +42,8 @@ yarn test                                 // run unit tests
 ###### Serverless
 
 ```sh
-serverless invoke local -f app            // test AWS lambda locally
+serverless invoke local -f app            // test AWS lambda function locally
+serverless offline | yarn offline         // emulate AWS lambda with API Gateway locally
 ```
 
 ###### AWS

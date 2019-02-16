@@ -6,6 +6,7 @@
   "main": "lambda.ts",
   "scripts": {
     "dev": "nodemon --watch 'pages/**/*' -e ts,tsx --exec ts-node ./server",
+    "offline": "serverless offline",
     "test": "yarn test:unit",
     "test:unit": "jest",
     "test:unit:ci": "jest --color --coverage --verbose --runInBand --ci",
@@ -40,6 +41,7 @@
     "nodemon": "^1.18.10",
     "prettier": "^1.16.4",
     "serverless-apigw-binary": "^0.4.4",
+    "serverless-offline": "^4.4.2",
     "serverless-plugin-typescript": "^1.1.5",
     "ts-jest": "^23.10.5",
     "ts-node": "^8.0.2",

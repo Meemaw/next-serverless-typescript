@@ -1,14 +1,9 @@
 service: meshwatch-landing
 
-package:
-  include:
-    - .next/
-    - page/
-    - next.config.js
-
 plugins:
   - serverless-plugin-typescript
   - serverless-apigw-binary
+  - serverless-offline
 
 provider:
   name: aws
@@ -19,6 +14,12 @@ provider:
     NODE_ENV: production
     IN_LAMBDA: true
 
+package:
+  include:
+    - .next/
+    - page/
+    - next.config.js
+
 functions:
   app:
     handler: lambda.handler
@@ -28,9 +29,9 @@ functions:
           path: /
       - http:
           method: ANY
-          path: "{proxy+}"
+          path: '{proxy+}'
 
 custom:
   apigwBinary:
     types:
-      - "*/*"
+      - '*/*'
