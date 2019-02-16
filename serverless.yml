@@ -1,0 +1,36 @@
+service: meshwatch-landing
+
+package:
+  include:
+    - .next/
+    - page/
+    - next.config.js
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-apigw-binary
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: production
+  region: us-east-1
+  environment:
+    NODE_ENV: production
+    IN_LAMBDA: true
+
+functions:
+  app:
+    handler: lambda.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: "{proxy+}"
+
+custom:
+  apigwBinary:
+    types:
+      - "*/*"

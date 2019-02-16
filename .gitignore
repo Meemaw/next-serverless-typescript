@@ -1,0 +1,12 @@
+# Next.js
+.next
+
+# Serverless framework
+.serverless
+.build
+
+# Node
+node_modules
+
+# Tests
+coverage

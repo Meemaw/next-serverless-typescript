@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "es5",
+    "moduleResolution": "node",
+    "lib": ["dom", "es2017"],
+    "jsx": "react",
+    "strict": true,
+    "rootDir": "./",
+    "typeRoots": ["node_modules/@types"]
+  },
+  "exclude": ["node_modules", "out", ".next"]
+}
