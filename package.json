@@ -10,6 +10,9 @@
     "test": "yarn test:unit",
     "test:unit": "jest",
     "test:unit:ci": "jest --color --coverage --verbose --runInBand --ci",
+    "test:e2e": "testcafe chrome __tests__/e2e --hostname 127.0.0.1",
+    "test:e2e:headless": "testcafe chrome:headless __tests__/e2e --hostname 127.0.0.1",
+    "test:e2e:ci": "BROWSER=none yarn dev 2>&1 > /dev/null & wait-on http-get://localhost:3000 && yarn test:e2e:headless",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build": "next build",
     "deploy": "next build && sls deploy",
@@ -48,6 +51,7 @@
     "serverless-apigw-binary": "^0.4.4",
     "serverless-offline": "^4.8.1",
     "serverless-plugin-typescript": "^1.1.5",
+    "testcafe": "^1.1.0",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.3"
@@ -56,7 +60,7 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "testRegex": "(/__tests__/unit/.*|(\\.|/)(test|spec))\\.tsx?$",
     "setupFilesAfterEnv": [
       "<rootDir>/setupTests.ts"
     ],

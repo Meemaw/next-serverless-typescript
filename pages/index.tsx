@@ -9,7 +9,7 @@ const Index = () => (
       <a>About Page</a>
     </Link>
     <Navbar open={false} />
-    <p>Hello World!</p>
+    <p className="hello-world">Hello World!</p>
   </div>
 );
 export default Index;
