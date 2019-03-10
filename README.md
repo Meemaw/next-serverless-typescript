@@ -27,6 +27,7 @@
 - Static type-checking with [Typescript](https://www.typescriptlang.org/)
 - Linting with [prettier](https://github.com/prettier/prettier)
 - Unit testing with [Jest](https://jestjs.io/) and [Enzyme](https://github.com/airbnb/enzyme)
+- E2E testing with [Testcafe](https://github.com/DevExpress/testcafe)
 
 ### Getting started
 
